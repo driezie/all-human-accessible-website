@@ -10,8 +10,8 @@ const hideAllDropdowns = () => {
         // Verwijdert de "active" class van alle dropdown buttons
         button.classList.remove("active");
         // verwijderd alle stylings van de svg voor rotatie
-        const svg = button.querySelector("svg");
-        svg.classList.remove("rotate");
+        const img = button.querySelector("img");
+        img.classList.remove("rotate");
     });
 };
 
@@ -33,8 +33,8 @@ dropdownButtons.forEach((button) => {
             // voegt de "active" class van de gekozen dropdown toe
             button.classList.add("active");
             // voegt de rotate class toe aan de svg
-            const svg = button.querySelector("svg");
-            svg.classList.toggle("rotate");
+            const img = button.querySelector("img");
+            img.classList.toggle("rotate");
         }
     });
 });

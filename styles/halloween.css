@@ -202,6 +202,7 @@ body.hlwn {
 .hlwn .hlwn-bottom {
     position: absolute;
     bottom: 0;
+    z-index: -10;
 }
 
 
@@ -227,6 +228,14 @@ body.hlwn {
 /* .hlwn .share-overlay .top svg path {
     stroke: #F7A100;
 } */
+
+.hlwn .filteren {
+    color: white;
+}
+
+.hlwn header .list-item a:hover, nav a:hover  {
+    background-color: #de9000d3;;
+}
 
 @media (min-width: 540px) {
     .hlwn .ghost {

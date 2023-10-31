@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter/Inter-Regular.ttf") format("woff2");
+}
+
 :root {
     --bg-header:#F7A100;
     --clr-header:white;
@@ -90,7 +100,7 @@ header .logo {
     padding: 0 10px;
 }
 
-header a, header button {
+header .list-item a, header button, nav a {
     text-decoration: none;
     color: var(--clr-header);
     padding: 1rem;
@@ -101,9 +111,7 @@ header a, header button {
     font-family: "Inter", sans-serif;
 }
 
-header a:hover
-/* header button:hover  */
-{
+header .list-item a:hover, nav a:hover  {
     background-color: #de9000;;
 }
 
@@ -214,7 +222,7 @@ main .banner-text p {
     border-bottom: 1px solid #ccc;
 }
 
-.sort-buttons button {
+.sort-buttons button, .sort-buttons select {
     height: 43px;
     padding: 0 12px;
     border: none;
@@ -226,26 +234,22 @@ main .banner-text p {
     border-radius: 2px;
     display: flex;
     align-items: center;
+    color: #424242;
 }
 
 .sort-buttons button svg {
     font-size: 16px;
 }
 
-.sort-buttons button.filteren svg {
-    position: absolute;
-    right: 12px;
-}
-
-.sort-buttons button.filteren {
+.sort-buttons .filteren {
     position: relative;
-    color: #333;
+    /* color: #333; */
     border: 1px solid #ccc;
     box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.1) inset;
     min-width: 120px;
     width: 100%;
     max-width: 250px;
-    color: #333;
+    -webkit-appearance: none;
 }
 
 .sort-buttons button.lijst-delen {
@@ -369,8 +373,33 @@ main .banner-text p {
     line-height: 24px;
 }
 
+.item .item-content .makelaar {
+    display: block; /* Is dit nodig op een bewaarde pagina? */
+    position: absolute;
+    right: 14px;
+    bottom: 45px;
+    max-height: 30px;
+    width: auto;
+}
+
 .item {
     border-bottom: 1px solid #ccc;
+}
+
+.item ul.kenmerken {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.item ul.kenmerken li {
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .pager {
@@ -378,6 +407,12 @@ main .banner-text p {
     padding-bottom: 2rem;
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
+}
+
+.pager p {
+    text-align: center;
+    color: #999;
+    padding-bottom: 1.5rem;
 }
 
 .pager .pager-pages {
@@ -446,6 +481,7 @@ footer .footer-grid .footer-item ul li a {
 
 footer .footer-grid .footer-item ul li a:hover {
     color: #333;
+    text-decoration: underline;
 }
 
 .share-overlay {
@@ -500,15 +536,12 @@ footer .footer-grid .footer-item ul li a:hover {
 }
 
 .share-overlay .search-bar svg, .share-overlay .person svg, .share-overlay .top svg {
-    /* padding-right: 1rem; */
     cursor: pointer;
 }
 
 .share-overlay .shared-with {
     padding: 1rem;
-    /* border-bottom: 1px solid #ccc; */
 }
-
 
 .share-overlay .shared-with .person {
     display: flex;
@@ -540,9 +573,8 @@ footer .footer-grid .footer-item ul li a:hover {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 19px; /* 118.75% */
+    line-height: 19px;
 }
-
 
 .menu-overlay, .share-overlay {
     width: 100%;
@@ -572,6 +604,7 @@ footer .footer-grid .footer-item ul li a:hover {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .dropdown-button svg {
@@ -587,7 +620,6 @@ footer .footer-grid .footer-item ul li a:hover {
     color: #0071b3;
     background: none;
     text-align: left;
-    
     font-family: 'Inter';
     font-size: 16px;
     position: relative;
@@ -614,7 +646,7 @@ footer .footer-grid .footer-item ul li a:hover {
     height: 24px;
 }
 
-.dropdown-button svg.rotate {
+.dropdown-button img.rotate {
     transform: rotate(180deg);
     transition: all 0.3s ease-in-out;
 }
@@ -629,13 +661,7 @@ footer .footer-grid .footer-item ul li a:hover {
         gap: 10px; 
     }
 
-    .grid-content .item {
-        /* display: flex; */
-    }
-
-
     .item img.banner-img {
-        /* width: 300px; */
         min-height: 220px;
         object-fit: cover;
         object-position: center;

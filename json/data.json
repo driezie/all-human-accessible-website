@@ -1,0 +1,21 @@
+{
+    "property": {
+        "title": "Patrijsstraat 39",
+        "address": "7132 DD Lichtenvoorde Broekdijk",
+        "features": {
+            "usage_area": "78 m²",
+            "plot_area": "141 m²",
+            "number_of_rooms": "3 kamers"
+        },
+        "price": "€ 469.000 k.k."
+    },
+    "agent": {
+        "name": "naam",
+        "agency": "Makkelaar NVM"
+    },
+    "posted_time": "7 uur geleden",
+    "image_urls": {
+        "property_image": "./assets/house5.jpg",
+        "agent_image": "./assets/person.jpg"
+    }
+}
