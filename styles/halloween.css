@@ -1,0 +1,235 @@
+.hlwn {
+    transition: all 0.5s ease;
+    display: block;
+}
+
+.hlwn-logo{
+    display: none;
+}
+.hlwn .logo {
+    display: none;
+}
+
+.hlwn .hlwn-logo {
+    display: block;
+}
+
+.hlwn .bat,.hlwn .ghost, .hlwn .spiderweb, .hlwn .hlwn-bottom, .hlwn .blur-item-left-breadcrumb {
+    display: block ;
+}
+
+.bat, .ghost, .spiderweb, .hlwn-bottom, .blur-item-left-breadcrumb {
+    display: none ;
+}
+
+
+body.hlwn {
+    background: #1E1E1E;
+}
+
+.hlwn .item img.banner-img {
+    filter: brightness(80%);
+}
+
+.hlwn header{
+    position: relative;
+    background: transparent;
+}
+
+.hlwn header .ghost {
+    position: absolute;
+    z-index: -10;
+    left: -20px;
+    top: 0;
+    height: 66px;
+    width: auto;
+    opacity: 0.4;
+}
+
+.hlwn .header-container nav {
+    position: relative;
+}
+
+.hlwn .blur-item-right-nav {
+    right: -30px;
+    top: -20px;
+    position: absolute;
+    height: 66px;
+    width: 128px;
+    /* background: red; */
+    background: rgba(161, 113, 23, 0.50);
+    border-radius: 50%;
+    z-index: -10;
+
+    filter: blur(45.5px);
+
+}
+
+
+.hlwn .blur-item-left-breadcrumb{
+    left: -30px;
+    top: -20px;
+    position: absolute;
+    height: 66px;
+    width: 128px;
+    /* background: red; */
+    background: rgba(161, 113, 23, 0.50);
+    border-radius: 50%;
+    z-index: -10;
+
+    filter: blur(75.5px);
+}
+
+.hlwn main .banner .share-button {
+    background: #1E1E1E;
+    /* color: #F7A100; */
+}
+
+.hlwn main .banner .share-button svg path {
+    fill: #F7A100;
+}
+
+.hlwn .logo-item .bat02 {
+    position: absolute;
+    z-index: -10;
+    right: -35px;
+    top: -15px;
+    height: 44px;
+    width: auto;
+}
+
+.hlwn .settings-button path {
+    stroke: #ffff;
+    fill: #fff;
+}
+
+.hlwn .breadcrumb a{
+    color: #fff;
+}
+
+
+
+.hlwn .breadcrumb a:first-child {
+    color: #F7A100;
+}
+
+.hlwn .breadcrumb {
+    position: relative;
+    border-color: #353739;
+}
+
+.hlwn .sort-buttons {
+    border-color: #353739;
+}
+
+.hlwn .breadcrumb .bat03{
+    position: absolute;
+    z-index: -10;
+    right: -11px;
+    top: 5px;
+    height: 57px;
+    width: auto;
+    opacity: 0.4;
+}
+
+.hlwn .sort-buttons button.filteren {
+    border-color: #F7A100;
+    color: white;
+}
+
+.hlwn .sort-buttons button.filteren svg path {
+    fill: white;
+}
+
+.hlwn .item {
+    border-color:#F7A100;
+}
+
+.hlwn .item .item-content h2 {
+    color: #F7A100;
+}
+
+.hlwn .item .item-content p.postal-adress {
+    color: #F1F1F1;
+}
+
+.hlwn .item .item-content p.price {
+    color: #FAFAFA;
+}
+
+.hlwn .item .item-content p.date{
+    color: #F1F1F1;
+}
+
+.hlwn .spiderweb01 {
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.hlwn main .banner {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.80) 100%), url(../assets/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hlwn .menu-overlay, .share-overlay {
+    background: transparent;
+}
+
+.hlwn .dropdown-button{
+    color: white;
+}
+
+.hlwn .dropdown-item a{
+    color: #F7A100;
+}
+
+.hlwn footer {
+    position: relative;
+    background: transparent;
+}
+
+.hlwn footer strong {
+    color: white;
+}
+
+.hlwn footer .footer-grid .footer-item ul li a {
+    color: #F7A100;
+}
+
+.hlwn .hlwn-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+.hlwn .share-overlay .top p {
+    color: white;
+}
+.hlwn .share-overlay .shared-with{
+    color: white;
+}
+.hlwn .share-overlay .shared-with .person .info p{
+    color: white;
+}
+
+.hlwn .share-overlay .person svg path {
+    fill: #F7A100;
+}
+
+.hlwn .share-overlay .search-bar svg path{
+    stroke: #F7A100;
+}
+
+/* .hlwn .share-overlay .top svg path {
+    stroke: #F7A100;
+} */
+
+@media (min-width: 540px) {
+    .hlwn .ghost {
+        display: none;
+    }
+}
