@@ -9,6 +9,7 @@ const hideAllDropdowns = () => {
     dropdownButtons.forEach((button) => {
         // Verwijdert de "active" class van alle dropdown buttons
         button.classList.remove("active");
+        button.setAttribute("aria-expanded", "false");
         // verwijderd alle stylings van de svg voor rotatie
         const img = button.querySelector("img");
         img.classList.remove("rotate");
@@ -32,9 +33,11 @@ dropdownButtons.forEach((button) => {
             document.querySelector(target).classList.toggle("hidden");
             // voegt de "active" class van de gekozen dropdown toe
             button.classList.add("active");
+            button.setAttribute("aria-expanded", "true");
             // voegt de rotate class toe aan de svg
             const img = button.querySelector("img");
             img.classList.toggle("rotate");
+
         }
     });
 });
@@ -45,4 +48,6 @@ const menuOverlay = document.querySelector('#menu-overlay');
 function Togglemenu() {
     menuOverlay.classList.toggle('hidden'); 
     hideAllDropdowns();
+    document.querySelector('main').classList.toggle('hidden');
+    document.querySelector('footer').classList.toggle('hidden');
 }

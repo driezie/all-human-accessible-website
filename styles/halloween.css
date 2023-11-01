@@ -4,14 +4,14 @@
 }
 
 .hlwn-logo{
-    display: none;
+    display: none !important;
 }
 .hlwn .logo {
-    display: none;
+    display: none !important;
 }
 
 .hlwn .hlwn-logo {
-    display: block;
+    display: flex !important;
 }
 
 .hlwn .bat,.hlwn .ghost, .hlwn .spiderweb, .hlwn .hlwn-bottom, .hlwn .blur-item-left-breadcrumb {
@@ -235,6 +235,14 @@ body.hlwn {
 
 .hlwn header .list-item a:hover, nav a:hover  {
     background-color: #de9000d3;;
+}
+
+.banner {
+    display: block !important;
+}
+
+.hlwn .banner {
+    display: none !important;
 }
 
 @media (min-width: 540px) {
